@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/commentBox"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/rounded_comment_box"
+    android:elevation="6dp"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <io.mochilogic.futontext.KeyEventEditText
+        android:id="@+id/edit_text"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="6"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="top|start"
+        android:hint="leave a comment..."
+        android:padding="6dp"
+        android:textColor="#BF5FFF"
+        android:textSize="14sp"
+        android:imeOptions="actionDone"/>
+
+    <TextView
+        android:id="@+id/comment_text"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="What a nice sentence!"
+        android:textColor="#B23AEE"
+        android:textSize="18sp"/>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="s a v e"
+            android:textSize="14sp"
+            android:textColor="#B23AEE"
+            android:onClick="onClickSave"/>
+
+        <TextView
+            android:id="@+id/remove"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="r e m o v e"
+            android:textSize="14sp"
+            android:textColor="#B23AEE"
+            android:onClick="onClickDelete"/>
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="c l o s e"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:onClick="onClickClose"/>
+    </RelativeLayout>
+</LinearLayout>
+
+
